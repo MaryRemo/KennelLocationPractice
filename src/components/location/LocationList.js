@@ -9,12 +9,10 @@ class LocationList extends Component {
             <section className="locations">
             {
                 this.props.locations.map(location =>
-                    <section>
                     <div key={location.id}>
                         {location.name}
                         {location.address}
                     </div>
-                </section>
                 )
             }
             </section>
