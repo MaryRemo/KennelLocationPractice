@@ -12,6 +12,7 @@ class LocationList extends Component {
                     <section>
                     <div key={location.id}>
                         {location.name}
+                        {location.address}
                     </div>
                 </section>
                 )
