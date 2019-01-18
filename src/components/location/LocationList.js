@@ -1,14 +1,24 @@
 import React, { Component } from 'react'
 
-export default class Location extends Component {
+// Update your application so that the array of 
+// locations is passed from the Kennel state to the 
+// props of LocationList. Then use the map() method to display all location names.
+class LocationList extends Component {
     render() {
         return (
-            <div>
-                <section>Nashville North Location</section>
-                <h5>500 Puppy Way</h5>
-                <section>Nashville South Location</section>
-                <h5>500 Kitty Way</h5>
-            </div>
-        );
+            <section className="locations">
+            {
+                this.props.locations.map(location =>
+                    <section>
+                    <div key={location.id}>
+                        {location.name}
+                    </div>
+                </section>
+                )
+            }
+            </section>
+        )
     }
 }
+
+export default LocationList
